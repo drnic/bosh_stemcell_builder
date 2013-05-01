@@ -22,4 +22,6 @@ $ kitchen test
 -----> [bash] sysctl_test.sh
        Finished verifying <default-ubuntu-1204> (0m1.92s).
 ...
+
+$ kitchen destroy
 ```
