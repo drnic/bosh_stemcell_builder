@@ -22,3 +22,20 @@ $ cd cookbooks/bosh_new_stage_name
 $ bundle
 $ kitchen test
 ```
+
+The last command will boot a dedicated VM via Vagrant, run the empty cookbooks (`recipes/default.rb`) and test with the empty test file (`test/integration/default/bash/bosh_new_stage_name_test.sh`).
+
+It leaves the Vagrant VM running.
+
+You can now iterate on the tests and on the cookbooks. You can do test-driven development of your new cookbook.
+
+```
+# run the cookbooks
+$ kitchen converge
+
+# run the tests
+$ kitchen verify
+
+# throw the VM away
+$ kitchen destroy
+```
