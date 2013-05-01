@@ -95,3 +95,4 @@ DEPENDENCIES
   berkshelf
   kitchen-vagrant
   test-kitchen (~> 1.0.0.alpha)
+  thor

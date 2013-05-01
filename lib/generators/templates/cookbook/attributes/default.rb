@@ -1,0 +1,1 @@
+default["<%= cookbook_name %>"] = {}
