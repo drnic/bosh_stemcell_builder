@@ -1,1 +1,2 @@
-default["<%= cookbook_name %>"] = {}
+default["bosh_sudoers"] = {}
+default["chroot"] = "/chroot"
