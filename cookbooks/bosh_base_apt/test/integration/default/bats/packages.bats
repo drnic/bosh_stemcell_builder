@@ -14,4 +14,4 @@
     [ "${lines[0]}" = "Package: $pkg" ]
   done
 }
-  
+
