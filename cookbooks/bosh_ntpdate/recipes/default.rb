@@ -15,7 +15,7 @@ directory "/var/vcap/bosh/bin" do
   action :create
 end
 
-cookbook_file "/var/vcap/bosh/bin/ntpdate" do
+cookbook_file "#{node.chroot}/var/vcap/bosh/bin/ntpdate" do
   source "ntpdate"
   owner "root"
   group "root"

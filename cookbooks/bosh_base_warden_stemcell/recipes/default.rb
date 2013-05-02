@@ -1,4 +1,4 @@
-directory node.chroot
+include_recipe "bosh_chroot"
 
 execute "Creating base stemcell archive" do
   command <<-BASH

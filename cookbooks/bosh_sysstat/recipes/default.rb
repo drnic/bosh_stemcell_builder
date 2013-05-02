@@ -1,4 +1,4 @@
-cookbook_file "/etc/default/sysstat" do
+cookbook_file "#{node.chroot}/etc/default/sysstat" do
   source "sysstat"
   owner "root"
   group "root"

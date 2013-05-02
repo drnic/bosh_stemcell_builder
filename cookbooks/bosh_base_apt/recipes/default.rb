@@ -6,12 +6,12 @@ execute "Disable interactive dpkg" do
 end
 
 # Networking...
-cookbook_file "/etc/hosts" do
+cookbook_file "#{node.chroot}/etc/hosts" do
   source "etc/hosts"
 end
 
 # Timezone
-cookbook_file "/etc/timezone" do
+cookbook_file "#{node.chroot}/etc/timezone" do
   source "etc/timezone"
 end
 
@@ -21,7 +21,7 @@ execute "dpkg-reconfigure tzdata" do
 end
 
 # Locale
-cookbook_file "/etc/default/locale" do
+cookbook_file "#{node.chroot}/etc/default/locale" do
   source "etc/default/locale"
 end
 
@@ -35,11 +35,11 @@ SHELL
 end
 
 # Firstboot script
-cookbook_file "/etc/rc.local" do
+cookbook_file "#{node.chroot}/etc/rc.local" do
   source "etc/rc.local"
 end
 
-cookbook_file "/root/firstboot.sh" do
+cookbook_file "#{node.chroot}/root/firstboot.sh" do
   source "root/firstboot.sh"
   mode "0755"
 end
