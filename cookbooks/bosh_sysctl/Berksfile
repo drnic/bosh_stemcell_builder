@@ -1,3 +1,5 @@
 site :opscode
 
 metadata
+
+cookbook "bosh_chroot", path: "../bosh_chroot"

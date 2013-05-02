@@ -1,4 +1,6 @@
-directory "/etc/sysctl.d" do
+include_recipe "bosh_chroot"
+
+directory "#{node.chroot}/etc/sysctl.d" do
   owner "root"
   group "root"
   mode "0755"
@@ -6,7 +8,7 @@ directory "/etc/sysctl.d" do
   action :create
 end
 
-cookbook_file "/etc/sysctl.d/60-bosh-sysctl.conf" do
+cookbook_file "#{node.chroot}/etc/sysctl.d/60-bosh-sysctl.conf" do
   owner "root"
   group "root"
   mode "0644"
