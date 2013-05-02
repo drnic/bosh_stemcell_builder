@@ -2,3 +2,5 @@ name "<%= cookbook_name %>"
 version "1.0.0"
 description "<%= simple_name %> for bosh"
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+
+depends "bosh_chroot"
