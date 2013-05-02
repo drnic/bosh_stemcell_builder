@@ -1,0 +1,7 @@
+site :opscode
+
+metadata
+
+%w[bosh_sysstat bosh_sysctl bosh_ntpdate bosh_sudoers bosh_clean].each do |name|
+  cookbook name, path: "../#{name}"
+end
