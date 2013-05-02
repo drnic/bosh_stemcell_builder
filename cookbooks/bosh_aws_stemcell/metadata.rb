@@ -2,9 +2,6 @@ name "bosh_aws_stemcell"
 version "1.0.0"
 description "aws_stemcell for bosh"
 
-depends "bosh_sysstat"
-depends "bosh_sysctl"
-depends "bosh_ntpdate"
-depends "bosh_sudoers"
-
-depends "bosh_clean"
+%w[bosh_sysstat bosh_sysctl bosh_ntpdate bosh_sudoers bosh_clean].each do |name|
+  depends name
+end
