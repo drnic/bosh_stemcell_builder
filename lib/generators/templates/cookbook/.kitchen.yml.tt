@@ -11,5 +11,5 @@ platforms:
 suites:
 - name: default
   run_list:
-    - recipe["<%= cookbook_name %>"]
+    - recipe[<%= cookbook_name %>]
   attributes: {}
